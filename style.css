@@ -1,16 +1,32 @@
 body {
     padding: 0;
     margin: 0;
-}
-
-.container {
-    background-color:  white;
+    --background-color: white;
+    --text-color: black;
+    --element-color: white;
+    background-color: var(--background-color);
+    color: var(--text-color);
     
 }
 
+/* .container {
+    --background-color: white;
+    --text-color: black;
+    --element-color: white;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    
+} */
+
+.dark {
+    --background-color: hsl(207, 26%, 17%);
+    --text-color: white;
+    --element-color: hsl(209, 23%, 22%);
+}
+
 header {
-    background-color: white;
     box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.1); 
+    background-color: var(--background-color);
 }
 
 header .heading {
@@ -26,17 +42,13 @@ header .heading {
 
 .headingText h5 {
     font-family: "Poppins", sans-serif;
-    color:black;
     font-weight: 700;
     font-style:normal;
     font-size: 16px;
     margin: 0px;
 }
 
-.headingButton button {
-    background-color: white;
-    border: none;
-    color:black;
+.headingButton {
     font-size: 15px;
     cursor: pointer;
     font-family: "Poppins", sans-serif;
@@ -62,7 +74,8 @@ header .heading {
 }
 
 .searchContainer button{
-    background-color: white;
+    background-color: var(--element-color );
+    color: var(--text-color);
     padding: 10px 12px 10px ;
     margin-right: -5px;
     border: none;
@@ -81,7 +94,8 @@ header .heading {
  }
 
 .searchContainer input[type=text]{
-    background-color: white;
+    background-color: var(--element-color );
+    color: var(--text-color);
     padding: 10px 70px 10px 5px;
     margin-right: -5px;
     border: none;
@@ -92,6 +106,8 @@ header .heading {
 }
 
 .filterContainer select{
+    background-color: var(--element-color );
+    color: var(--text-color);
     padding: 10px 70px 10px 5px;
     font-family: "Poppins", sans-serif;
     border: none;
@@ -131,6 +147,8 @@ main .countryBody .countryDisplay a{
     box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.2);
     border-radius: 10px;
     transition: transform 0.2s ease-in-out;
+    background-color: var(--element-color );
+    color: var(--text-color);
 }
 
 .countryItem:hover{
@@ -183,7 +201,8 @@ main .countryBody .countryDisplay a{
 }
 
 .btnContainer button {
-    background-color: white;
+    background-color: var(--element-color);
+    color: var(--text-color);
     border: none;
     padding: 8px 26px;
     font-family: "poppins", sans-serif;
@@ -267,6 +286,7 @@ main .countryBody .countryDisplay a{
 }
 
 .borderCountries a {
+    background-color: var(--element-color);
     box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.1);
     margin-inline: 8px;
     padding: 3px 20px;
